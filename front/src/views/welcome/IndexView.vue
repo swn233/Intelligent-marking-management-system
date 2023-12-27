@@ -63,23 +63,23 @@ function easeInOutCubic(t: number): number {
         <el-affix :offset="10" style="text-align: left;margin-left:70px;height: 0px">
           <el-image  class="image" style="width: 50px" src="https://s2.loli.net/2023/12/21/jxC7e5nNRvHpdDJ.png"></el-image>
         </el-affix>
-        <div style="height: 100px"></div>
+        <div class="shadow" style="border-top-right-radius:10px;background-color:#eaeaea; height: 100px"></div>
         <el-menu
-            style="width: 100%;height: 100%; font-family: 'freight-big-pro', serif;font-size: 15px; border:0px"
+            style="border-bottom-right-radius:10px; background-color: #eaeaea; width: 100%;height: 100%; font-family: 'freight-big-pro', serif;font-size: 15px; border:0px"
             default-active="1-1"
-            class="el-menu-vertical font"
+            class="shadow el-menu-vertical font"
             :collapse="false"
         >
 <!--侧栏1          -->
-          <el-menu-item @click="router.push('/index')" index="1">
+          <el-menu-item @click="router.push('/index/')" index="1">
             <template #title>
-              <span  class="font">Photo</span>
+              <span  class="font">Overview</span>
             </template>
           </el-menu-item>
 <!--          侧栏2-->
-          <el-menu-item index="2">
+          <el-menu-item index="2" @click="router.push('/index/PhotoShow')">
             <template #title >
-              <span  class="font">Overview</span>
+              <span  class="font">Photo</span>
             </template>
           </el-menu-item>
           <!--          侧栏3-->
@@ -94,6 +94,12 @@ function easeInOutCubic(t: number): number {
               <span  class="font">Exit</span>
             </template>
           </el-menu-item>
+          <div style="height: 70%"></div>
+          <el-menu-item :disabled="true" index="5" >
+            <template #title class="font">
+              <span style="font-size: 28px;font-weight: bold" class="font">by swn</span>
+            </template>
+          </el-menu-item>
         </el-menu>
       </el-aside>
 
@@ -104,7 +110,7 @@ function easeInOutCubic(t: number): number {
           <!--        backup-->
           <div style="position: absolute;right: 50px">
             <el-affix  :offset="10" style="text-align:center;margin-left:100px;height: 0px">
-              <el-button @click="backup" size="large" style="width:35px; background-color: white ;border-radius: 100px;border:0px"  :icon="ArrowUp" dark />
+              <el-button class="shadow" @click="backup" size="large" style="width:35px; background-color: #f6f6f6 ;border-radius: 100px;border:0px" :icon="ArrowUp" dark />
             </el-affix>
           </div>
           <router-view v-slot="{ Component }">
@@ -127,6 +133,7 @@ function easeInOutCubic(t: number): number {
 }
 
 .font {
+  font-family:  freight-big-pro, serif;
   font-size: 3.5em;
   line-height: 1em;
   color: black;
@@ -144,5 +151,10 @@ function easeInOutCubic(t: number): number {
 .showMenu:hover {
   width: 350px;
 }
-
+.shadow{
+  transition: box-shadow 0.3s;
+}
+.shadow:hover{
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.1);;
+}
 </style>

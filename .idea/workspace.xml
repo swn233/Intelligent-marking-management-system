@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f39c3365-61c3-4b15-826b-42635004c37e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front/src/views/index/PhotoManage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/views/index/PhotoOverview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/net/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/net/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Welcome.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/views/index/PhotoShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/index/PhotoShow.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/views/welcome/IndexView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/welcome/IndexView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/welcome/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/welcome/LoginPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/views/welcome/RegisterPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/welcome/RegisterPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/welcome/ResetPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/welcome/ResetPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +83,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="JUnit.BackendApplicationTests.testEmail">
     <configuration name="BackendApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -122,22 +115,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackendApplicationTests.contextLoads1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.backend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.backend" />
-      <option name="MAIN_CLASS_NAME" value="com.example.backend.BackendApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BackendApplicationTests.contextLoads2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -149,6 +126,22 @@
       <option name="PACKAGE_NAME" value="com.example.backend" />
       <option name="MAIN_CLASS_NAME" value="com.example.backend.BackendApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackendApplicationTests.testEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.backend" />
+      <option name="MAIN_CLASS_NAME" value="com.example.backend.BackendApplicationTests" />
+      <option name="METHOD_NAME" value="testEmail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,10 +193,10 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="JUnit.BackendApplicationTests.testEmail" />
       <item itemvalue="JUnit.BackendApplicationTests.testUpload" />
       <item itemvalue="JUnit.BackendApplicationTests.contextLoads2" />
       <item itemvalue="JUnit.BackendApplicationTests" />
-      <item itemvalue="JUnit.BackendApplicationTests.contextLoads1" />
       <item itemvalue="JUnit.BackendApplicationTests.contextLoads" />
       <item itemvalue="npm.uninstall" />
       <item itemvalue="npm.dev" />
@@ -211,11 +204,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BackendApplicationTests.testEmail" />
         <item itemvalue="JUnit.BackendApplicationTests.testUpload" />
         <item itemvalue="JUnit.BackendApplicationTests.contextLoads" />
         <item itemvalue="JUnit.BackendApplicationTests.contextLoads2" />
         <item itemvalue="JUnit.BackendApplicationTests" />
-        <item itemvalue="JUnit.BackendApplicationTests.contextLoads1" />
       </list>
     </recent_temporary>
   </component>
@@ -243,6 +236,11 @@
       <workItem from="1703057399408" duration="62384000" />
       <workItem from="1703318419211" duration="976000" />
       <workItem from="1703332125012" duration="1107000" />
+      <workItem from="1703481365624" duration="648000" />
+      <workItem from="1703489053068" duration="18000" />
+      <workItem from="1703509810623" duration="10751000" />
+      <workItem from="1703558511975" duration="7027000" />
+      <workItem from="1703687156569" duration="621000" />
     </task>
     <servers />
   </component>

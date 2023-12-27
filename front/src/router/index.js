@@ -31,12 +31,16 @@ const router=createRouter({
             children:[
                 {
                     path:'',
-                    name:'index-show',
-                    component:()=>import('../views/index/PhotoShow.vue')
+                    name:'index-overview',
+                    component:()=>import('../views/index/PhotoOverview.vue')
                 },{
                     path:'PhotoManage',
                     name:'index-manage',
                     component:()=>import('../views/index/PhotoManage.vue')
+                },{
+                    path:'PhotoShow',
+                    name:'index-show',
+                    component:()=>import('../views/index/PhotoShow.vue')
                 }
             ]
         }

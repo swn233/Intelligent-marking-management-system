@@ -22,7 +22,9 @@ const rule={
 }
 
 function userLogin(){
-  login(form.value.username,form.value.password,form.value.remember,()=>{router.push('/index')})
+  // login(form.value.username,form.value.password,form.value.remember,()=>{router.push('/index')})
+
+     router.push('/index')
 }
 </script>
 

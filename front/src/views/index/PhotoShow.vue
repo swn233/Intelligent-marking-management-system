@@ -31,7 +31,7 @@ onMounted(() => {
   <div>
     <div  :class="{'odd-image':index%2!==0}" style="margin: 10vh;display: flex" v-for="(img,index) in urls" >
       <img loading="lazy" style="height: 56vh"  class="picture" :src="img" :key="index"   alt="this a picture"/>
-      <div style="width: 100%;text-align: center;display: flex;flex-direction: column ;justify-content: center;align-items: ;">
+      <div style="width: 100%;text-align: center;display: flex;flex-direction: column ;justify-content: center;">
         <div class="font">{{place[index]}}</div>
         <div class="font">{{theme[index]}}</div>
         <div class="font" style="">{{date[index]}}</div>

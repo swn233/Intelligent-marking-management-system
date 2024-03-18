@@ -1,29 +1,38 @@
 <script lang="ts" setup>
 import {onMounted, onUpdated, ref} from 'vue'
 import type { UploadProps, UploadUserFile } from 'element-plus'
-import {post,get,accessHeader} from '@/net'
+// import {post,get,accessHeader} from '@/net'
 import {ElMessage} from "element-plus";
 import router from "@/router";
 import {Lock, User,Message,Edit,Top,ArrowUp} from "@element-plus/icons-vue";
 const selectedFile=ref()
 const windowHeight=ref()
 const fileList = ref<UploadUserFile[]>([
+  {
+    name: 'food.jpeg',
+    url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+  },
+  {
+    name: 'food2.jpeg',
+    url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+  },
 ])
+
 const urls=ref({})
 const headers=ref({})
-function getHeaders(){
-  headers.value=accessHeader();
-}
-function imageGet(){
-  get("/api/data/image",(data)=>{
-    fileList.value = data;
-    // 遍历 fileList 数组，为每个对象设置 name 属性
-    fileList.value.forEach((file) => {
-      file.name = file.url; // 将 url 赋值给 name
-    });
+// function getHeaders(){
+//   headers.value=accessHeader();
+// }
+// function imageGet(){
+//   get("/api/data/image",(data)=>{
+//     fileList.value = data;
+//     // 遍历 fileList 数组，为每个对象设置 name 属性
+//     fileList.value.forEach((file) => {
+//       file.name = file.url; // 将 url 赋值给 name
+//     });
 
-  })
-}
+//   })
+// }
 
 //删除图片
 const handleRemove: UploadProps['onRemove'] = (uploadFile, uploadFiles) => {
@@ -59,16 +68,17 @@ const handlePreview: UploadProps['onPreview'] = (file) => {
 
 //图片上传成功和失败后的处理
 const handleSuccess:UploadProps['onSuccess']=(response, uploadFile, uploadFiles)=>{
-  // 判断response是否以https开头,是的话上传成功
-  console.log(response)
-  let resp=response
-  if (resp.startsWith('https')) {
-    ElMessage.success("上传成功")
-    uploadFile.name=response
-  }else {
-    ElMessage.error(response)
-    uploadFile.status="fail"
-  }
+  // // 判断response是否以https开头,是的话上传成功
+  // console.log(response)
+  // let resp=response
+  // if (resp.startsWith('https')) {
+  //   ElMessage.success("上传成功")
+  //   uploadFile.name=response
+  // }else {
+  //   ElMessage.error(response)
+  //   uploadFile.status="fail"
+  // }
+  uploadFile.status="success"
 }
 
 const handleError:UploadProps['onError']=(error, uploadFile, uploadFiles)=>{
@@ -76,8 +86,8 @@ const handleError:UploadProps['onError']=(error, uploadFile, uploadFiles)=>{
 }
 //初始化
 onMounted(() => {
-  imageGet()
-  getHeaders()
+  // imageGet()
+  // getHeaders()
 })
 </script>
 
@@ -88,10 +98,10 @@ onMounted(() => {
     <el-upload style="width: 66%;min-width: 650px;text-align: center"
         v-model:file-list="fileList"
         class="upload affix-container"
-        :on-preview="handlePreview"
-        :on-remove="handleRemove"
+        :on-preview=""
+        :on-remove=""
         list-type="picture"
-        action="http://localhost:8080/api/data/upload"
+        action=""
         method="post"
         accept="image"
         :on-success="handleSuccess"

@@ -13,9 +13,10 @@ import router from "@/router";
 const scrollbarRef=ref()
 const scrolltop=ref()
 function logout_func(){
-  logout(()=>{
-    router.push("/")
-  })
+  // logout(()=>{
+  //   router.push("/")
+  // })
+  router.push("/")
 }
 
 const onscroll: ({ scrollTop: number, scrollLeft: number }) => void = ({ scrollTop, scrollLeft }) => {
@@ -71,27 +72,27 @@ function easeInOutCubic(t: number): number {
             :collapse="false"
         >
 <!--侧栏1          -->
-          <el-menu-item @click="router.push('/index/')" index="1">
+          <el-menu-item @click="router.push('')" index="1">
             <template #title>
-              <span  class="font">Overview</span>
+              <span  class="font">答案上传</span>
             </template>
           </el-menu-item>
 <!--          侧栏2-->
-          <el-menu-item index="2" @click="router.push('/index/PhotoShow')">
+          <el-menu-item index="2" @click="router.push('')">
             <template #title >
-              <span  class="font">Photo</span>
+              <span  class="font">批改</span>
             </template>
           </el-menu-item>
           <!--          侧栏3-->
-          <el-menu-item @click="router.push('/index/PhotoManage')" index="3" >
+          <el-menu-item @click="router.push('')" index="3" >
             <template #title >
-              <span  class="font">Manage</span>
+              <span  class="font">结果</span>
             </template>
           </el-menu-item>
           <el-menu-item index="4" @click="logout_func">
 
             <template #title class="font">
-              <span  class="font">Exit</span>
+              <span  class="font">退出</span>
             </template>
           </el-menu-item>
           <div style="height: 70%"></div>
@@ -134,7 +135,7 @@ function easeInOutCubic(t: number): number {
 
 .font {
   font-family:  freight-big-pro, serif;
-  font-size: 3.5em;
+  font-size: 2.5em;
   line-height: 1em;
   color: black;
   text-align: left; /* 文字左对齐 */
